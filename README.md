@@ -108,3 +108,17 @@ tensor([[1., 4.],
 ```
 - 많은 연산을 축약하고 있다고 생각하시면 됩니다.  unsqueeze와 concatenate를 함축하고 있어요 <br>
 ```python print(torch.cat([x.unsqueeze(0), y.unsqueeze(0), z.unsqueeze(0)], dim=0)) ```
+### 5. 파이썬 클래스
+- C++이랑 거의 비슷하네요. 공부할 게 딱히 없습니다.
+```python
+class Calculator:
+    def __init__(self): # 객체 생성 시 호출될 때 실행되는 초기화 함수. 이를 생성자라고 한다.
+        self.result = 0
+
+    def add(self, num): # 객체 생성 후 사용할 수 있는 함수.
+        self.result += num
+        return self.result
+cal1 = Calculator()
+print(cal1.add(3))
+print(cal1.add(4))
+```
